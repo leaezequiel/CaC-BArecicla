@@ -41,6 +41,8 @@ header{
         width: 35%;
         height: 35%;
         border-color: white;
+        margin:auto;
+        display:block;
     }
 }
 
