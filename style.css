@@ -22,8 +22,8 @@ header{
         flex-direction: column;/* despues ver porque no anda*/
     }
     .background{
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
     }
     img{
         display: none;
@@ -85,14 +85,6 @@ a{
     color:green;
 }
 
-footer{
-    width:100%;
-    overflow: hidden;
-    background-color: lightgrey;
-    bottom: 0;
-    position: fixed;
-    text-align: center;
-}
 
 .grid-container {
     display: grid;
@@ -116,3 +108,12 @@ footer{
     border-radius: 15px;
     
   }
+  
+footer{
+    width:100%;
+    overflow: hidden;
+    background-color: lightgrey;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+}
