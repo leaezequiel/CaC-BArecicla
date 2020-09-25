@@ -46,9 +46,6 @@ header{
     }
 }
 
-h3{
-    color: green;
-}
 .navbar a {
     color: black;
     text-decoration: none;
@@ -77,15 +74,17 @@ h3{
     padding: 10px;
 }
 
-h4{
+h4 , h3{
     color:green;
 }
+
 a{
     text-decoration: none;
     color:green;
 }
-
-
+a:hover {
+    opacity: 0.7;
+}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
