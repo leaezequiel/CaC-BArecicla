@@ -28,6 +28,20 @@ header{
     img{
         display: none;
     }
+
+    .grid-container {
+        display: list-item;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px 2px;
+        grid-template-areas:
+          "PapelyCartón" 
+          "Plásticos"
+          "Vidrio"
+          "Metales""
+          "Especiales";
+       
+      }
  
 }
 
@@ -44,6 +58,17 @@ header{
         margin:auto;
         display: block;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 2px;
+        grid-template-areas:
+          "PapelyCartón Plásticos Vidrio Metales"
+          "Especiales Especiales Especiales Especiales";
+       
+      }
 }
 
 .navbar a {
@@ -85,16 +110,7 @@ a{
 a:hover {
     opacity: 0.7;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px 2px;
-    grid-template-areas:
-      "PapelyCartón Plásticos Vidrio Metales"
-      "Especiales Especiales Especiales Especiales";
-   
-  }
+
     
   .PapelyCartón { grid-area: PapelyCartón;}
   .Plásticos { grid-area: Plásticos;}
