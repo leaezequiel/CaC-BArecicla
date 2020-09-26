@@ -24,6 +24,7 @@ header{
     .background{
     margin-left: 2%;
     margin-right: 2%;
+    height: 100vh;
     }
     img{
         display: none;
@@ -49,6 +50,7 @@ header{
     .background{
         margin-left: 15%;
         margin-right: 15%;
+        height: 100vh;
     }
 
     img{
@@ -81,7 +83,7 @@ header{
 }
 .navbar{
     display: flex;
-    background-color: lightgrey;
+    background-color: grey;
 }
 .container-1{
     display: flex;
@@ -93,7 +95,6 @@ header{
     position: relative;
     border: 0;
 }
-
 .container-1 div{
     border: 1px #ccc solid;
     padding: 10px;
@@ -127,9 +128,13 @@ a:hover {
     flex-direction: column;
     width: auto;
     margin: auto;   
-    border-color: black solid;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }  
+input{
+    border-radius: 15px;
+    border-color: cornsilk;
+}
 footer{
     width:100%;
     overflow: hidden;
