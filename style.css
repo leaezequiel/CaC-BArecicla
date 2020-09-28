@@ -1,3 +1,4 @@
+/* Aplican a todos HTML: */
 *{
     font-family: 'Syne', sans-serif;
     margin: 0;
@@ -14,65 +15,6 @@ header{
     top:0;
 }
 
-@media (max-width: 768px) {
-    .container-1{
-        flex-direction: column;/* despues ver porque no anda*/
-    }
-    .navbar{
-        flex-direction: column;/* despues ver porque no anda*/
-    }
-    .background{
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 100vh;
-    }
-    img{
-        display: none;
-    }
-
-    .grid-container {
-        display: list-item;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        gap: 10px 10px; 
-        grid-template-areas:
-          "PapelyCartón"    
-          "Plásticos"
-          "Vidrio"
-          "Metales""
-          "Especiales";
-       
-      }
- 
-}
-
-@media (min-width: 769px) {
-    .background{
-        margin-left: 15%;
-        margin-right: 15%;
-        height: 100vh;
-    }
-
-    img{
-        width: 35%;
-        height: 35%;
-        border-color: white;
-        margin:auto;
-        display: block;
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 10px 2px;
-        grid-template-areas:
-          "PapelyCartón Plásticos Vidrio Metales"
-          "Especiales Especiales Especiales Especiales";
-       
-      }
-}
-
 .navbar a {
     color: black;
     text-decoration: none;
@@ -84,20 +26,6 @@ header{
 .navbar{
     display: flex;
     background-color: grey;
-}
-.container-1{
-    display: flex;
-}
-
-.box-1{
-    border-radius: 15px;
-    flex:1;
-    position: relative;
-    border: 0;
-}
-.container-1 div{
-    border: 1px #ccc solid;
-    padding: 10px;
 }
 
 h4 , h3, a{
@@ -111,7 +39,29 @@ a:hover {
     opacity: 0.7;
 }
 
-    
+footer{
+    width:100%;
+    overflow: hidden;
+    background-color: lightgrey;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+}
+/* Aplican index.html: */
+.container-1{
+    display: flex;
+}
+.box-1{
+    border-radius: 15px;
+    flex:1;
+    position: relative;
+    border: 0;
+}
+.container-1 div{
+    border: 1px #ccc solid;
+    padding: 10px;
+}
+/* Aplican a residuos.html: */   
   .PapelyCartón { grid-area: PapelyCartón;}
   .Plásticos { grid-area: Plásticos;}
   .Vidrio { grid-area: Vidrio; }
@@ -121,9 +71,24 @@ a:hover {
   .PapelyCartón, .Plásticos, .Vidrio, .Metales, .Especiales{
     border: 1px #ccc solid;
     border-radius: 15px;
-    
   }
-  
+
+  .Plásticos > h3{
+    color: red;
+}
+.PapelyCartón > h3{
+    color: royalblue;
+}
+.Vidrio > h3{
+    color: orange;
+}
+.Metales > h3{
+    color: grey;
+}
+.Especiales > h3{
+    color:black
+}
+  /* Aplican a formulario.html: */ 
 .formulario{
     flex-direction: column;
     width: auto;
@@ -135,14 +100,7 @@ input{
     border-radius: 15px;
     border-color: cornsilk;
 }
-footer{
-    width:100%;
-    overflow: hidden;
-    background-color: lightgrey;
-    bottom: 0;
-    position: fixed;
-    text-align: center;
-}
+/* Aplican a sobremi.html: */ 
 .avatar{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -177,19 +135,93 @@ footer{
   button > a {
       color: white;
   }
+/* Puntos de corte según dispositivo: */
 
-  .Plásticos > h3{
-      color: red;
-  }
-  .PapelyCartón > h3{
-      color: royalblue;
-  }
-  .Vidrio > h3{
-      color: orange;
-  }
-  .Metales > h3{
-      color: grey;
-  }
-  .Especiales > h3{
-      color:black
-  }
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 767px) {
+    .container-1{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .background{
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 100vh;
+    }
+    img{
+        display: none;
+    }
+
+    .grid-container {
+        display: list-item;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px 10px; 
+        grid-template-areas:
+          "PapelyCartón"    
+          "Plásticos"
+          "Vidrio"
+          "Metales""
+          "Especiales";
+       
+      }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   .background{
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 100vh;
+    }
+
+    img{
+        width: 35%;
+        height: 35%;
+        border-color: white;
+        margin:auto;
+        display: block;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 2px;
+        grid-template-areas:
+          "PapelyCartón Plásticos Vidrio Metales"
+          "Especiales Especiales Especiales Especiales";
+       
+      }
+	
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   .background{
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 100vh;
+    }
+
+    img{
+        width: 35%;
+        height: 35%;
+        border-color: white;
+        margin:auto;
+        display: block;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 2px;
+        grid-template-areas:
+          "PapelyCartón Plásticos Vidrio Metales"
+          "Especiales Especiales Especiales Especiales";
+       
+      }
+}
