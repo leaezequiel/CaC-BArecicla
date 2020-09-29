@@ -56,6 +56,11 @@ footer{
     flex:1;
     position: relative;
     border: 0;
+    transition-duration: 2s;
+}
+
+.box-1:hover {
+    background-color: lightgray;
 }
 .container-1 div{
     border: 1px #ccc solid;
@@ -72,6 +77,7 @@ footer{
     border: 1px #ccc solid;
     border-radius: 15px;
   }
+  
 
   .Plásticos > h3{
     color: red;
